@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+
+        android:id="@+id/txtlineone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="請選擇分店："
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#4682B4"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spnPrefer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/txtlineone"
+        />
+    <TextView
+        android:id="@+id/txtlinetwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="請選擇餐點："
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#4682B4"
+        android:textSize="20sp"
+        android:layout_below="@id/spnPrefer"/>
+
+    <ImageView
+        android:id="@+id/imgChicken"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtlinetwo"
+        android:layout_alignParentLeft="true"
+        app:srcCompat="@drawable/chicken" />
+    <ImageView
+        android:id="@+id/imgPork"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/imgChicken"
+        android:layout_alignParentLeft="true"
+        app:srcCompat="@drawable/pork" />
+    <ImageView
+        android:id="@+id/imgBeef"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/imgPork"
+        android:layout_alignParentLeft="true"
+        app:srcCompat="@drawable/beef" />
+    <ImageView
+        android:id="@+id/imgSalmon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/imgBeef"
+        android:layout_above="@id/txtQuantity"
+        android:layout_alignParentLeft="true"
+        app:srcCompat="@drawable/salmon" />
+
+    <ListView
+        android:id="@+id/lstPrefer"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/txtlinetwo"
+        android:layout_toRightOf="@id/imgChicken"
+        />
+    <TextView
+        android:id="@+id/txtQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#4682B4"
+        android:textSize="20sp"
+        android:layout_below="@+id/lstPrefer"
+        android:text="請選擇數量：" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txtQuantity" />
+    <TextView
+        android:id="@+id/seektext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/txtlinethree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#4682B4"
+        android:textSize="20sp"
+        android:layout_below="@+id/seektext"
+        android:text="請選擇配餐：" />
+
+    <TextView
+        android:id="@+id/txtRice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="15dp"
+        android:layout_below="@+id/txtlinethree"
+        android:text="  米飯" />
+
+    <RadioGroup
+        android:id="@+id/radGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/txtRice">
+
+        <RadioButton
+            android:id="@+id/radRice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="白飯" />
+
+        <RadioButton
+            android:id="@+id/radRice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="燕麥飯" />
+
+        <RadioButton
+            android:id="@+id/radRice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="糙米飯" />
+
+        <RadioButton
+            android:id="@+id/radRice4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="五穀飯" />
+
+        <RadioButton
+            android:id="@+id/radRice5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="紫米飯" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/txtSoup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="15dp"
+        android:layout_below="@+id/radGroup1"
+        android:text="  湯" />
+    <RadioGroup
+        android:id="@+id/radGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/txtSoup">
+
+        <RadioButton
+            android:id="@+id/radSoup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="豆腐味噌湯" />
+
+        <RadioButton
+            android:id="@+id/radSoup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蘿蔔味噌湯"
+             />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/txtlinefour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#4682B4"
+        android:textSize="20sp"
+        android:layout_below="@+id/radGroup2"
+        android:text="通常會一併外帶的餐點...(最多可選7種)" />
+
+    <CheckBox
+        android:id="@+id/chkBlackTea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="紅茶(+$35)"
+        android:layout_below="@id/txtlinefour"
+        />
+    <CheckBox
+        android:id="@+id/chkAmericano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="美式咖啡(+$40)"
+        android:layout_below="@id/txtlinefour"
+        android:layout_toRightOf="@+id/chkBlackTea"
+        />
+
+    <CheckBox
+        android:id="@+id/chkLatte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="咖啡拿鐵(+$55)"
+        android:layout_below="@id/txtlinefour"
+        android:layout_toRightOf="@+id/chkAmericano"
+        />
+    <CheckBox
+        android:id="@+id/chkMilkTea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="紅茶拿鐵(+$60)"
+        android:layout_below="@id/chkBlackTea"
+        />
+    <CheckBox
+        android:id="@+id/chkBun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="美式餐包(+$35)"
+        android:layout_below="@id/chkBlackTea"
+        android:layout_toRightOf="@+id/chkMilkTea"
+        />
+    <CheckBox
+        android:id="@+id/chkFocaccia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="佛夏卡麵包(+$40)"
+        android:layout_below="@id/chkMilkTea"
+        />
+    <CheckBox
+        android:id="@+id/chkSalad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="特選沙拉(+$55)"
+        android:layout_below="@id/chkMilkTea"
+        android:layout_toRightOf="@id/chkFocaccia"
+        />
+    <TextView
+        android:id="@+id/txtlinefive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#4682B4"
+        android:textSize="20sp"
+        android:layout_below="@+id/chkSalad"
+        android:text="是否需要餐具？" />
+
+    <Switch
+        android:id="@+id/switchUtensil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chkFocaccia"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textOff="no"
+        android:textOn="yes"
+        android:text="不需要"
+        android:layout_toRightOf="@id/txtlinefive" />
+
+    <EditText
+        android:id="@+id/edtRemarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchUtensil"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="100"
+        android:hint="請在此輸入給予商家的備註"
+        android:inputType="textMultiLine" />
+
+
+    <Button
+        android:id="@+id/btnList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtRemarks"
+        android:text="加入清單"
+        app:backgroundTint="@color/lightseagreen" />
+
+</RelativeLayout>
+</ScrollView>
